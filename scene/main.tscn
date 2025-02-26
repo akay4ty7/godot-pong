@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvbfhxma1hirq"]
+[gd_scene load_steps=3 format=3 uid="uid://bvbfhxma1hirq"]
 
 [ext_resource type="PackedScene" uid="uid://3cixwuw1hbxn" path="res://scene/player.tscn" id="1_1a3qo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aawrx"]
 
 [node name="Main" type="Node2D"]
 
@@ -10,3 +12,33 @@
 
 [node name="Player" parent="GameLevel" instance=ExtResource("1_1a3qo")]
 position = Vector2(0, 350)
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="RightWall" type="StaticBody2D" parent="Walls"]
+position = Vector2(260, 0)
+scale = Vector2(1, 37.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/RightWall"]
+shape = SubResource("RectangleShape2D_aawrx")
+
+[node name="LeftWall" type="StaticBody2D" parent="Walls"]
+position = Vector2(-260, 0)
+scale = Vector2(1, 37.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/LeftWall"]
+shape = SubResource("RectangleShape2D_aawrx")
+
+[node name="TopWall" type="StaticBody2D" parent="Walls"]
+position = Vector2(0, -385)
+scale = Vector2(27, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/TopWall"]
+shape = SubResource("RectangleShape2D_aawrx")
+
+[node name="BottomWall" type="StaticBody2D" parent="Walls"]
+position = Vector2(0, 385)
+scale = Vector2(27, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/BottomWall"]
+shape = SubResource("RectangleShape2D_aawrx")
