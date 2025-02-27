@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvbfhxma1hirq"]
+[gd_scene load_steps=4 format=3 uid="uid://bvbfhxma1hirq"]
 
 [ext_resource type="PackedScene" uid="uid://3cixwuw1hbxn" path="res://scene/player.tscn" id="1_1a3qo"]
+[ext_resource type="PackedScene" uid="uid://uyu8ba2jawvu" path="res://scene/ball.tscn" id="2_bdxrl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aawrx"]
 
@@ -42,3 +43,5 @@ scale = Vector2(27, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/BottomWall"]
 shape = SubResource("RectangleShape2D_aawrx")
+
+[node name="Ball" parent="." instance=ExtResource("2_bdxrl")]
