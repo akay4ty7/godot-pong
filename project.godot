@@ -21,6 +21,13 @@ window/size/viewport_height=750
 window/handheld/orientation=1
 window/vsync/vsync_mode=0
 
+[global_group]
+
+paddles="This is the group of player paddles"
+vertical_wall="Vertical walls have different physical interactions with objects."
+upper_wall="Opponent-side wall."
+lower_wall="Player-side wall"
+
 [input]
 
 left={

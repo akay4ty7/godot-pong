@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://3cixwuw1hbxn"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_yy7aq"]
+[ext_resource type="Script" path="res://scene/player.gd" id="1_mm24v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gpyqn"]
 size = Vector2(40, 6)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_mnmac"]
 
-[node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_yy7aq")
+[node name="Player" type="CharacterBody2D" groups=["paddles"]]
+script = ExtResource("1_mm24v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_gpyqn")
